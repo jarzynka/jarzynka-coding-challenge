@@ -1,0 +1,23 @@
+<h1>Select a location to display air pollution info</h1>
+<form (ngSubmit)="onSubmitLocation()" class="form">
+  <label for="locationName" class="form-label">Location Name</label>
+  <input placeholder="Search for a location" type="text" id="locationName" name="locationName" [(ngModel)]="locationName" class="form-text-input"  />
+  <label for="locationState" class="form-label">State/Province</label>
+  <select id="locationState" name="locationState" [(ngModel)]="locationState" class="form-text-input">
+    <option value="">No Filter</option>
+    <option value="Massachusetts">MA (Massachusetts)</option>
+    <option value="New%20Hampshire">NH (New Hampshire)</option>
+    <option value="New%York">NY (New York)</option>
+    <option value="Florida">FL (Florida)</option>
+  </select>
+  <label for="locationCountry" class="form-label">Country</label>
+  <select id="locationCountry" name="locationCountry" [(ngModel)]="locationCountry" class="form-text-input">
+    <option value="">No Filter</option>
+    <option value="US">US (United States)</option>
+    <option value="CA">CA (Canada)</option>
+    <option value="MX">MX (Mexico)</option>
+    <option value="UK">UK (United Kingdom)</option>
+  </select>
+  <input type="submit" value="GET POLLUTION INFO" />    
+</form>
+

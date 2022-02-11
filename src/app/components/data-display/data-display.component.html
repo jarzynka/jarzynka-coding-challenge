@@ -1,0 +1,30 @@
+<div>
+  <h1>Data for: {{this.data.location}}</h1>
+  <h2>Last observed at: {{this.data.human_readable_time}}</h2>
+  <div class="card highlight-card">
+    <p>Air Quality Index</p>
+    <div class="card-value">{{this.data.aqi}}</div>
+    <div class="card-footer" [ngStyle]="{'background-color': this.data.aqi_level?.color}"><span>{{this.data.aqi_level?.description}}</span></div>
+  </div>
+  
+  <div class="card-container">
+    <app-data-display-item [title]="'Carbon Monoxide'" [value]="this.data.co" [level]="this.data.co_level"></app-data-display-item>
+    <app-data-display-item [title]="'Ammonia'" [value]="this.data.no2" [level]="this.data.nh3_level"></app-data-display-item>
+  </div>
+
+  <div class="card-container">
+    <app-data-display-item [title]="'Nitrogen Monoxide'" [value]="this.data.no" [level]="this.data.no_level"></app-data-display-item>
+    <app-data-display-item [title]="'Nitrogen Dioxide'" [value]="this.data.no2" [level]="this.data.no2_level"></app-data-display-item>
+  </div>
+
+  <div class="card-container">
+    <app-data-display-item [title]="'Ozone'" [value]="this.data.o3" [level]="this.data.o3_level"></app-data-display-item>
+    <app-data-display-item [title]="'Sulfur Dioxide'" [value]="this.data.so2" [level]="this.data.so2_level"></app-data-display-item>
+  </div>
+
+  <div class="card-container">
+    <app-data-display-item [title]="'Fine Particulates (2.5um)'" [value]="this.data.pm2_5" [level]="this.data.pm25_level"></app-data-display-item>
+    <app-data-display-item [title]="'Coarse Particulates (10um)'" [value]="this.data.pm10" [level]="this.data.pm10_level"></app-data-display-item>
+  </div>
+
+</div>

@@ -1,0 +1,5 @@
+<div class="container">
+<app-location-search (outputEmitter)="handleLocationSearchOutput($event)"></app-location-search>    
+<app-data-display *ngIf="dataError===false" [data]="data"></app-data-display>  
+<app-error-display *ngIf="dataError===true" [error]="data"></app-error-display>
+</div>

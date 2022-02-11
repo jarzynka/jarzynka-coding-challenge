@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'jarzynka-coding-challenge';
+  title = "Chris Jarzynka's Coding Challenge!";
+  
+
+  constructor() { }
+
 }

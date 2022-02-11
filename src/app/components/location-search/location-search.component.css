@@ -1,0 +1,15 @@
+
+.form-label{
+  font-size: 0.8rem;
+  align-items: baseline;
+}
+
+.form-text-input{
+  margin-right: 1rem;
+}
+
+.form {
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+  border-bottom: darkblue 1px solid;
+}
